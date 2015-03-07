@@ -98,6 +98,9 @@ input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -180,7 +183,7 @@ body {
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
-    color: #3A4145;
+    color: #40826d;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
@@ -199,7 +202,7 @@ h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    color: #2E2E2E;
+    color: #274f42;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
     font-family: "Kreon", serif;
@@ -233,7 +236,7 @@ h6 {
 }
 
 a {
-    color: #4A4A4A;
+    color: #274f42;
     transition: color ease 0.3s;
 }
 
@@ -476,8 +479,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 100%;
     margin-bottom: 5rem;
     text-align: center;
-    background: #222 no-repeat center center;
-    background-size: cover;
+    background: #222 repeat;
     overflow: hidden;
 }
 
@@ -705,12 +707,29 @@ margin on the iframe, cause it breaks stuff. */
     animation: fade-in-down 0.6s;
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+    font-family: 'Vampiro One', cursive;
+    font-size: 3.8em;
+    font-weight: 300;
+    letter-spacing: 0;
+    border: 12px solid #40826d;
+    color: #fff;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 60%;
+    text-shadow: 2px 4px 0 #000;
+    box-shadow: 0 5px 0 #274f42, inset 0 5px #274f42;
 }
 .home-template .page-description {
     -webkit-animation: fade-in-down 0.9s;
     animation: fade-in-down 0.9s;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+    font-family: 'Kreon', serif;
+    color: #fff;
+    font-weight: 300;
+    margin: 2em 1em;
+    font-size: 1.5em;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -882,6 +901,21 @@ body:not(.post-template) .post-title {
     display: none;
 }
 
+.post-header {
+    text-align: center;
+    padding-bottom: 0.5em;
+    background: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    text-align: center;
+}
+
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
     display: block;
@@ -890,6 +924,20 @@ body:not(.post-template) .post-title {
     margin: 0 auto;
     padding: 0.6em 0;
 }
+
+/* Stylised first letter in the post content */
+
+.post-content > p:first-child::first-letter {
+    font-size: 2.7em;
+    font-weight: 700;
+    font-family: 'Kreon', serif;
+    float: left;
+    margin: 0 0.1em -0.25em 0;
+    padding: 0 0.1em 0;
+    line-height: 1;
+    color: #274f42;
+    border: 2px dashed #66cead;
+  }
 
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
@@ -1055,7 +1103,7 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65%;
+    height: 50%;
     min-height: 180px;
 }
 
@@ -1327,6 +1375,103 @@ body:not(.post-template) .post-title {
     display: block;
     width: 45%;
     float: left;
+}
+
+
+/* Custom footer */
+
+footer.footer {
+  background: url(/content/images/2015/03/background.png) bottom/cover no-repeat;
+  padding: 1em 0 1em;
+}
+footer.footer h2 {
+  font-family: 'Kreon', serif;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-footer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  text-align: center;
+}
+.social-icons ul {
+  -webkit-padding-start: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.social-icons li {
+  text-align: center;
+  padding: 0 1em;
+}
+.social-icons a {
+  color: #a4cec1;
+  font-size: 2em;
+}
+.social-icons a:hover {
+  color: #66cead;
+}
+
+.footer-container {
+    float:left;
+    width: 45%;
+    padding: 0 15px;
+}
+
+.footer-copy {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.footer-copy h1 {
+  font-family: 'Vampiro One', cursive;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  text-align: center;
+}
+.footer-copy p {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 1.2em 0 1em;
+}
+.footer-image {
+  max-width: 40%;
+  opacity: 0.3;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  font-family: 'Kreon', serif;
+  -webkit-padding-start: 0;
+  font-size: 1.2em;
+}
+.footer-nav li {
+  border-top: 1px dashed #fff;
+}
+.footer-nav li + li {
+  margin-top: 0.5em;
+}
+.footer-nav a {
+  color: #fff;
+}
+
+.colophon {
+  max-width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)) top/100% 1px no-repeat;
+  padding-top: 1em;
+}
+.colophon p {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.colophon span {
+  float: right;
 }
 
 
