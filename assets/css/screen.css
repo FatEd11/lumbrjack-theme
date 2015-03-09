@@ -466,6 +466,12 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+.logo-text {
+    font-family: 'Vampiro One', cursive;
+    text-shadow: 1px 2px 0 #000;
+    font-size: 1.1em;
+}
+
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -813,7 +819,8 @@ body:not(.post-template) .post-title {
     min-height: 77px;
 }
 
-.post-date {
+.post-date,
+.post-comments {
     display: inline-block;
     margin-left: 8px;
     padding-left: 12px;
@@ -901,7 +908,7 @@ body:not(.post-template) .post-title {
     display: none;
 }
 
-.post-header {
+.post-template .post-header {
     text-align: center;
     padding-bottom: 0.5em;
     background: linear-gradient(to left, rgba(39, 79, 66, 0), rgba(39, 79, 66, 0.7), rgba(39, 79, 66, 0)) bottom/80% 1px no-repeat;
@@ -1381,8 +1388,9 @@ body:not(.post-template) .post-title {
 /* Custom footer */
 
 footer.footer {
-  background: url(/content/images/2015/03/background.png) bottom/cover no-repeat;
+  background: url(../images/background.png) bottom/cover no-repeat;
   padding: 1em 0 1em;
+  width: 100%;
 }
 footer.footer h2 {
   font-family: 'Kreon', serif;
@@ -1406,6 +1414,7 @@ footer.footer h2 {
 .social-icons li {
   text-align: center;
   padding: 0 1em;
+  display: inline-block;
 }
 .social-icons a {
   color: #a4cec1;
@@ -1418,7 +1427,7 @@ footer.footer h2 {
 .footer-container {
     float:left;
     width: 45%;
-    padding: 0 15px;
+    padding: 0 2.5%;
 }
 
 .footer-copy {
@@ -1430,24 +1439,32 @@ footer.footer h2 {
   color: #fff;
   text-shadow: 2px 2px 0 #000;
   text-align: center;
+  font-weight: 300;
+  font-size: 2em;
 }
 .footer-copy p {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 1.2em 0 1em;
+}
+
+.flex-container {
+    display: flex;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+    padding-top: 10%;
 }
 .footer-image {
   max-width: 40%;
   opacity: 0.3;
-  display: block;
-  margin: 0 auto;
 }
 
 .footer-nav ul {
   list-style-type: none;
   font-family: 'Kreon', serif;
   -webkit-padding-start: 0;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .footer-nav li {
   border-top: 1px dashed #fff;
@@ -1457,6 +1474,10 @@ footer.footer h2 {
 }
 .footer-nav a {
   color: #fff;
+  text-decoration: none;
+}
+.footer-nav a:hover {
+  color: #66cead;
 }
 
 .colophon {
@@ -1465,6 +1486,7 @@ footer.footer h2 {
   color: #fff;
   background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)) top/100% 1px no-repeat;
   padding-top: 1em;
+  font-size: 0.8em;
 }
 .colophon p {
   max-width: 90%;
@@ -1596,6 +1618,10 @@ footer.footer h2 {
         padding: 0;
     }
 
+    .footer-container {
+        width: 95%;
+    }
+
 }
 
 
@@ -1608,6 +1634,10 @@ footer.footer h2 {
     .main-header {
         margin-bottom: 15px;
         height: 40%;
+    }
+
+    .main-header .inner {
+        width: 100%;
     }
 
     .no-cover.main-header {
