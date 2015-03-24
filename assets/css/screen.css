@@ -1119,7 +1119,7 @@ body:not(.post-template) .post-title {
     height: 50%;
     min-height: 180px;
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .no-cover.post-head.main-header {
@@ -1523,9 +1523,6 @@ footer.footer h2 {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        /*height: auto;
-        min-height: 240px;
-        height: 60%;*/
         padding: 15% 0;
     }
 
@@ -1641,7 +1638,6 @@ footer.footer h2 {
 
     .main-header {
         margin-bottom: 15px;
-        /*height: 40%;*/
     }
 
     .main-header .inner {
@@ -1771,6 +1767,7 @@ footer.footer h2 {
     h1, h2, h3,
     h4, h5, h6 {
         margin: 0 0 0.5em 0;
+
     }
 
     h1 {
@@ -1901,7 +1898,6 @@ footer.footer h2 {
     .home-template .page-title {
         font-size: 3.4em;
     }
-
 }
 
 
